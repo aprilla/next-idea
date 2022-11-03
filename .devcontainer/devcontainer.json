@@ -13,7 +13,20 @@
     "customizations": {
       "codespaces": {
         "openFiles": ["pages/index.js"]
-      }
+	},
+	"vscode": {
+		"extensions": [
+			"dbaeumer.vscode-eslint"
+		],
+    "settings": {
+      "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+      ]
+    }
+	}
     },
     "onCreateCommand": "npm install && npm run build",
     "postCreateCommand": "",
