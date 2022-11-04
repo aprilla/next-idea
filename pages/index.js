@@ -1,30 +1,30 @@
-import { useCallback, useEffect, useState } from 'react'
-import Button from '../components/Button'
-import ClickCount from '../components/ClickCount'
-import styles from '../styles/home.module.css'
+import { useCallback, useEffect, useState } from "react";
+import Button from "../components/Button";
+import ClickCount from "../components/ClickCount";
+import styles from "../styles/home.module.css";
 
 function throwError() {
   console.log(
     // The function body() is not defined
     document.body()
-  )
+  );
 }
 
 function Home() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
   const increment = useCallback(() => {
-    setCount((v) => v + 1)
-  }, [setCount])
+    setCount((v) => v + 1);
+  }, [setCount]);
 
   useEffect(() => {
     const r = setInterval(() => {
-      increment()
-    }, 1000)
+      increment();
+    }, 1000);
 
     return () => {
-      clearInterval(r)
-    }
-  }, [increment])
+      clearInterval(r);
+    };
+  }, [increment]);
 
   return (
     <main className={styles.main}>
@@ -52,12 +52,12 @@ function Home() {
         <p>
           The button below will throw 2 errors. You'll see the error overlay to
           let you know about the errors but it won't break the page or reset
-          your state.
+          your state. This is a small change.
         </p>
         <Button
           onClick={(e) => {
-            setTimeout(() => document.parentNode(), 0)
-            throwError()
+            setTimeout(() => document.parentNode(), 0);
+            throwError();
           }}
         >
           Throw an Error
@@ -65,7 +65,7 @@ function Home() {
       </div>
       <hr className={styles.hr} />
     </main>
-  )
+  );
 }
 
-export default Home
+export default Home;
