@@ -13,7 +13,15 @@
     "customizations": {
       "codespaces": {
         "openFiles": ["pages/index.js"]
-      }
+	},
+	"vscode": {
+		"extensions": [
+			"dbaeumer.vscode-eslint"
+		],
+    "settings": {
+      "eslint.alwaysShowStatus": True
+    }
+	}
     },
     "onCreateCommand": "npm install && npm run build",
     "postCreateCommand": "",
