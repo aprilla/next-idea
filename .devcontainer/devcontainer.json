@@ -19,7 +19,7 @@
 			"dbaeumer.vscode-eslint"
 		],
     "settings": {
-      "eslint.alwaysShowStatus": true
+      "eslint.alwaysShowStatus": false
     }
 	}
     },
